@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg-color: #000;
+            --second-bg-color: #000000;
+            --text-color: #fff;
+            --main-color: #0ef;
+        }
+        html{
+            font: size 62.5;
+            overflow-x: hidden;
+        }
+        body{
+            background:var(--bg-color);
+            color: var(--text-color);
+        }
+        span {
+            color: var(--main-color);
+        }
+
+        section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+        .heading{
+            text-align: center;
+            font-size: 3.5rem;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .skills-container .skills-box {
+    flex: 1 1 20rem;
+    background:darkslategrey;
+    padding: 2rem 1rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid darkslategrey;
+    transition: .5s ease;
+}
+.skills-container .skills-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+.skills-box i{
+    font-size: 4rem;
+    color:var(--main-color);
+}
+
+.skills-box h3{
+    font-size: 2rem;
+}
+.skills h2{
+    margin-bottom: 4rem;
+}
+
+    </style>
+</head>
+<body>
+    <section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+
+        <div class="skills-box">
+            <i class='bx bxl-html5' ></i>  
+            <h3>HTML5</h3>
+            <p>
+               
+            </p>
+          
+        </div>
+
+        <div class="skills-box">
+            <i class='bx bx-code' ></i>
+            <h3>CSS3</h3>
+            <p>
+
+            </p>
+        </div>
+
+        <div class="skills-box">
+            <i class='bx bx-code' ></i>
+            <h3>JAVASCRIPT</h3>
+            <p>
+
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+</html>

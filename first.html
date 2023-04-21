@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PORTFOLIO</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+  *{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:'Poppins',sans-serif;
+}
+:root{
+    /* --bg-color: #1f242d; */
+    --bg-color: #000;
+    --second-bg-color: #000000;
+    /* --second-bg-color: #323946; */
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+html{
+    font: size 62.5;
+    overflow-x: hidden;
+} 
+body{
+    background:var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 2rem 9%;
+    background:rgb(13, 15, 15);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.header.sticky {
+    border-bottom: 1rem solid rgba(0,0,0,0.2);
+}
+
+.logo{
+    font-size: 2.0rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a{
+        font-size: 1.3rem;
+        color:var(--text-color);
+        margin-left: 1rem;
+        transition-duration: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color)
+} 
+
+#menu-icon {
+    font-size: 2.0rem;
+    color: var(--text-color);
+    display: none;
+}   
+
+.home{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.home-img img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateX(-1.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.home-content h3 {
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.0rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.0rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background:var(--second-bg-color);
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.0;
+}
+
+.about-content h3 {
+    font-size:  2.5rem;
+}
+
+.about-content p {
+    font-size:  1.6rem;
+    text-align: left;
+    margin: 2rem 0 3rem;
+
+}
+
+
+.skills h2{
+    margin-bottom: 4rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem; 
+}
+
+.skills-container .skills-box {
+    flex: 1 1 20rem;
+    background:darkslategrey;
+    padding: 2rem 1rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid darkslategrey;
+    transition: .5s ease;
+}
+
+.skills-container .skills-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.skills-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.skills-box h3 {
+    font-size: 2rem;
+}
+
+.skills-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+
+
+.portfolio {
+    background: var(--second-bg-color)
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box{
+    position:relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img{
+    width: 500%;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1),var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+
+.portfolio-layer h4{
+    font-size: 2.5rem;
+}
+
+.portfolio-layer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 60rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background: rgb(45, 57, 57);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: rgb(13, 15, 15);
+
+}
+
+.footer-text p{
+    font-size:  1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+ 
+@media (max-width: 991px) {
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,0.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2); 
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .services h2 {
+        margin-bottom: 3rem;   
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img{
+        width: 90vw;
+    }
+
+    .about-img img {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>  
+
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about" >ABOUT</a>
+            <a href="#skills" >SKILLS</a>
+            <a href="#portfolio" >PORTFOLIO</a>
+            <a href="#contact" >CONTACT</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Yuvanesh</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>
+                Currently Pursuing <b>Electronics and Communication Engineering</b> at <b>SRI SAIRAM ENGINEERING COLLEGE</b>, Thambaram
+            </p>
+            <div class="social-media">
+                <a href="https://github.com/yuvanesh18" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/yuvanesh-n-2903j" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+            <a href="Yuvanesh-resume.pdf" download="yuvi-resume" class="btn">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="yuvi-img.jpg" >
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="yuvi-img2.jpg" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer!</h3>
+            <p>
+               Currently Pursuing,<b>Electronics and Communication Engineering</b> 3rd year at <b>Sri Sairam Engineering College</b>
+            </p>
+            <a href="about.html " class="btn">Read More</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+            <div class="skills-box">
+                <i class='bx bx-code-curly'></i>    
+                <h3>FrontEnd Development</h3>
+                <p>
+                   
+                </p>
+                <a href="frontend.html" class="btn">Read More</a>
+            </div>
+
+            <div class="skills-box">
+                <i class='bx bx-code' ></i>
+                <h3>Programming Language</h3>
+                <p>
+
+                </p>
+                <a href="proglang.html" class="btn">Read More</a>
+            </div>
+<!-- 
+            <div class="skills-box">
+                <i class='bx bxl-java'></i>
+                <h3> java </h3>
+                <p>
+
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div> -->
+
+            <!-- <div class="skills-box">
+                <i class='bx bxl-css3'></i>
+                <h3>CSS 3</h3>
+                <p>oihwfuhwefiuweferui reigueruig 
+                    eriugheriug erg erugehryug eg eriuger.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="skills-box">
+                <i class='bx bxl-python'></i>
+                <h3>Python</h3>
+                <p>oihwfuhwefiuweferui reigueruig 
+                    eriugheriug erg erugehryug eg eriuger.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="skills-box">
+                <i class='bx bxl-html5'></i>
+                <h3>html5</h3>
+                <p>oihwfuhwefiuweferui reigueruig 
+                    eriugheriug erg erugehryug eg eriuger.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div> -->
+
+        </div>
+
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="project-img1.png" >
+                <div class="portfolio-layer">
+                    <h4>Portfolio</h4>
+                    <!-- <p>weiuhwiuehet,rtiurhtuw,rtrihturiothur rurwt ui riutruih wrto.</p> -->
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+
+            <div class="portfolio-box">
+                <img src="project-img3.png">
+                <div class="portfolio-layer">
+                    <h4>Docker Container (IEEE)</h4>
+                    <!-- <p>weiuhwiuehet,rtiurhtuw,rtrihturiothur rurwt ui riutruih wrto.</p> -->
+                    <a href="IEEE DOCKER.pdf" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <!-- <div class="portfolio-box">
+                <img src="project-img23.png" >
+                <div class="portfolio-layer">
+                    <h4>Docker Container</h4>
+                    <p>weiuhwiuehet,rtiurhtuw,rtrihturiothur rurwt ui riutruih wrto.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div> -->
+
+        </div>
+
+        
+
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+        </form>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>
+                Copyright &copy; 2023 by Hacker | All Rights Reserved.
+            </p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bxs-up-arrow-alt'></i></a>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Java Script -->
+    <script src="scripting.js"></script>
+
+    <!-- <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script> -->
+
+
+
+
+
+
+
+</body>
+</html>
